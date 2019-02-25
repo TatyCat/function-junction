@@ -4,12 +4,23 @@
  * construct available in Javascript.
  */
 
+const max = (numb1, numb2) => {
+  if (numb1 > numb2) {
+    return numb1
+  } else if (numb2 > numb1) {
+    return numb2
+  }
+}
+
 // ...
 
 /**
  * Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
+const maxOfThree = (numb1, numb2, numb3) => {
+  return Math.max(numb1, numb2, numb3)
+}
 
 // ...
 
@@ -18,12 +29,27 @@
  * arguments and computes the sum of those two numbers.
  */
 
+const sum = (numb1, numb2) => {
+  return (numb1 + numb2)
+}
+
 // ...
 
 /*
  * Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
  */
+const sumOfArray = (arrayNum) => {
+  console.log(arrayNum)
+  return arrayNum.forEach((x, i) => {
+    // console.log(`${x} and ${i}`)
+    // console.log(`mmmm annnddd ${x + x}`)
+    x += x
+    console.log(x)
+    return x
+  }
+  )
+}
 
 // ...
 
