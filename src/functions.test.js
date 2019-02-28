@@ -40,16 +40,14 @@ const sum = (numb1, numb2) => {
  * all the numbers in an array.
  */
 const sumOfArray = (arrayNum) => {
-  console.log(arrayNum)
-  return arrayNum.forEach((x, i) => {
-    // console.log(`${x} and ${i}`)
-    // console.log(`mmmm annnddd ${x + x}`)
-    x += x
-    console.log(x)
-    return x
+  if (arrayNum.length > 0) {
+    const arrayClone = Array.from(arrayNum).reverse()
+    let theSum = arrayNum[0] + arrayClone[0]
+    return ((theSum * arrayNum.length) / 2)
   }
-  )
+  else { return 0 }
 }
+
 
 // ...
 
