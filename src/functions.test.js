@@ -56,6 +56,13 @@ const sumOfArray = (arrayNum) => {
  * and returns true if it is a vowel, false otherwise.
  */
 
+const isVowel = (incomingString) => {
+  const vowelsArray = ["a", "e", "i", "o", "u"]
+
+  // return vowelsArray.toLowerCase.includes(incomingString)
+  return vowelsArray.includes(incomingString.toLowerCase())
+}
+
 // ...
 
 /**
@@ -67,6 +74,21 @@ const sumOfArray = (arrayNum) => {
  * return the string "tothohisos isos fofunon".
  */
 
+const rovarspraket = (stringToConvert) => {
+  const consts = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x", "z"]
+  let intake = stringToConvert.split('')
+  const output = [];
+  intake.map(i => {
+    if (consts.includes(i)) {
+      output.push(i + "o" + i)
+    } else {
+      output.push(i)
+    }
+  })
+
+  return output.join("")
+
+}
 // ...
 
 /**
@@ -75,7 +97,9 @@ const sumOfArray = (arrayNum) => {
  * reverse("skoob") should return the
  * string "books".
  */
-
+const reverse = (intakeString) => {
+  return intakeString.split('').reverse().join('')
+}
 // ...
 
 /**
@@ -84,6 +108,20 @@ const sumOfArray = (arrayNum) => {
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
+
+const findLongestWord = (intakeString) => {
+  const stringArray = intakeString.split(" ");
+  const theLongestWord = stringArray.reduce((a, b) => {
+    if (b.length > a.length) {
+      return b;
+    } else {
+      return a;
+    }
+  });
+  return theLongestWord;
+}
+
+
 
 // ...
 
